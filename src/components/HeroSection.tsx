@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background image with parallax-like scale */}
+      {/* Background image */}
       <motion.div
         initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
@@ -34,7 +34,8 @@ const HeroSection = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+        {/* Warm meringue overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
       </motion.div>
 
       {/* Content */}
@@ -49,16 +50,7 @@ const HeroSection = () => {
             Sala Weselna & Bankietowa · Andrespol
           </p>
 
-          {/* Massive title with gold gradient */}
-          <h1
-            className="font-display text-7xl sm:text-8xl md:text-[10rem] tracking-[0.15em] text-gold-gradient leading-none mb-6"
-            style={{
-              backgroundImage: `linear-gradient(135deg, hsl(43 65% 62%), hsl(43 72% 45%), hsl(43 60% 35%))`,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
+          <h1 className="font-display text-7xl sm:text-8xl md:text-[10rem] tracking-[0.15em] leading-none mb-6 text-charcoal">
             ADRIATICO
           </h1>
 
@@ -73,7 +65,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="font-body text-xl md:text-2xl text-cream-dark max-w-xl mx-auto leading-relaxed italic"
+                className="font-accent text-2xl md:text-3xl text-charcoal-light max-w-xl mx-auto leading-relaxed italic"
               >
                 {slogans[sloganIndex]}
               </motion.p>
@@ -86,7 +78,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="mt-12 font-body text-xs tracking-[0.3em] uppercase border border-gold/30 px-8 py-4 text-gold hover:bg-gold/10 transition-all duration-500"
+          className="mt-12 font-body text-xs tracking-[0.3em] uppercase border border-charcoal/20 px-8 py-4 text-charcoal hover:bg-gold hover:text-primary-foreground hover:border-gold transition-all duration-500"
         >
           Odkryj Naszą Historię
         </motion.a>
@@ -99,7 +91,7 @@ const HeroSection = () => {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
+        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-charcoal-muted">
           Przewiń w dół
         </span>
         <motion.div

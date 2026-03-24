@@ -13,23 +13,21 @@ const ConversionHub = () => {
   }, []);
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding section-dark">
       <RevealOnScroll className="text-center mb-12">
         <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-4">
           Zarezerwuj termin
         </p>
-        <h2 className="font-display text-4xl md:text-6xl text-cream">
+        <h2 className="font-display text-4xl md:text-6xl">
           Dostępność & Kontakt
         </h2>
         <div className="gold-line w-24 mx-auto mt-6" />
       </RevealOnScroll>
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
-        {/* Calendar side */}
         <AvailabilitySection onDateSelect={handleDateSelect} />
-        {/* Form side */}
         <div>
-          <h3 className="font-display text-2xl text-cream mb-6">
+          <h3 className="font-display text-2xl mb-6">
             Wyślij zapytanie
           </h3>
           <ContactForm selectedDate={selectedDate} selectedHall={selectedHall} />

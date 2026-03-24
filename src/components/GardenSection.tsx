@@ -26,12 +26,12 @@ const extras = [
 
 const GardenSection = () => {
   return (
-    <section id="garden" className="section-padding bg-secondary/30">
+    <section id="garden" className="section-padding bg-meringue-dark">
       <RevealOnScroll className="text-center mb-16">
         <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-4">
           Dodatkowe udogodnienia
         </p>
-        <h2 className="font-display text-4xl md:text-6xl text-cream">
+        <h2 className="font-display text-4xl md:text-6xl text-charcoal">
           Ogród & Dodatki
         </h2>
         <div className="gold-line w-24 mx-auto mt-6" />
@@ -40,12 +40,12 @@ const GardenSection = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {extras.map((item, i) => (
           <RevealOnScroll key={item.title} delay={i * 0.1}>
-            <div className="border border-border p-8 text-center hover:border-gold/30 transition-colors duration-500 h-full">
-              <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center border border-gold/20 rounded-sm">
-                <item.icon size={24} className="text-gold" />
+            <div className="border border-border bg-background p-8 text-center hover:border-gold/40 hover:shadow-lg transition-all duration-500 h-full rounded-sm">
+              <div className="w-16 h-16 mx-auto mb-5 flex items-center justify-center border border-gold/20 rounded-full">
+                <item.icon size={26} className="text-gold" />
               </div>
-              <h3 className="font-display text-xl text-cream mb-2">{item.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              <h3 className="font-display text-xl text-charcoal mb-2">{item.title}</h3>
+              <p className="font-body text-sm text-charcoal-muted leading-relaxed">{item.desc}</p>
             </div>
           </RevealOnScroll>
         ))}

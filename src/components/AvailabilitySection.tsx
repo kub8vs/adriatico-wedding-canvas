@@ -66,16 +66,16 @@ const AvailabilitySection = ({ onDateSelect }: AvailabilitySectionProps) => {
   );
 
   const statusColors: Record<DateStatus, string> = {
-    available: "bg-gold/20 text-gold hover:bg-gold/40 cursor-pointer border border-gold/30",
-    booked: "bg-secondary text-muted-foreground cursor-not-allowed",
-    closed: "text-muted-foreground/30 cursor-not-allowed",
+    available: "bg-gold/20 text-meringue hover:bg-gold/40 cursor-pointer border border-gold/30",
+    booked: "bg-meringue/10 text-meringue-deep cursor-not-allowed",
+    closed: "text-meringue-deep/30 cursor-not-allowed",
   };
 
   return (
     <div>
       {/* Hall toggle */}
       <div className="flex mb-6">
-        <div className="flex border border-border rounded-sm overflow-hidden">
+        <div className="flex border border-meringue-deep/30 rounded-sm overflow-hidden">
           {(["grand", "boutique"] as HallType[]).map((h) => (
             <button
               key={h}
@@ -83,7 +83,7 @@ const AvailabilitySection = ({ onDateSelect }: AvailabilitySectionProps) => {
               className={`px-6 py-3 font-body text-xs tracking-[0.2em] uppercase transition-all duration-300 ${
                 hall === h
                   ? "bg-gold text-primary-foreground"
-                  : "text-muted-foreground hover:text-cream"
+                  : "text-meringue-deep hover:text-meringue"
               }`}
             >
               {h === "grand" ? "Sala Duża" : "Sala Mała"}
@@ -93,22 +93,22 @@ const AvailabilitySection = ({ onDateSelect }: AvailabilitySectionProps) => {
       </div>
 
       {/* Calendar */}
-      <div className="bg-card p-6 border border-border">
+      <div className="bg-espresso/80 p-6 border border-meringue-deep/20 rounded-sm">
         <div className="flex items-center justify-between mb-6">
-          <button onClick={prevMonth} className="text-muted-foreground hover:text-gold transition-colors">
+          <button onClick={prevMonth} className="text-meringue-deep hover:text-gold transition-colors">
             <ChevronLeft size={20} />
           </button>
-          <h3 className="font-display text-xl text-cream">
+          <h3 className="font-display text-xl text-meringue">
             {MONTHS_PL[currentMonth.getMonth()]} {currentMonth.getFullYear()}
           </h3>
-          <button onClick={nextMonth} className="text-muted-foreground hover:text-gold transition-colors">
+          <button onClick={nextMonth} className="text-meringue-deep hover:text-gold transition-colors">
             <ChevronRight size={20} />
           </button>
         </div>
 
         <div className="grid grid-cols-7 gap-1.5 mb-1.5">
           {DAYS_PL.map((d) => (
-            <div key={d} className="text-center font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground py-2">
+            <div key={d} className="text-center font-body text-[10px] tracking-[0.2em] uppercase text-meringue-deep py-2">
               {d}
             </div>
           ))}
@@ -130,18 +130,18 @@ const AvailabilitySection = ({ onDateSelect }: AvailabilitySectionProps) => {
           })}
         </div>
 
-        <div className="flex flex-wrap gap-5 mt-6 pt-4 border-t border-border">
+        <div className="flex flex-wrap gap-5 mt-6 pt-4 border-t border-meringue-deep/20">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-sm bg-gold/20 border border-gold/30" />
-            <span className="font-body text-xs text-muted-foreground">Dostępna</span>
+            <span className="font-body text-xs text-meringue-deep">Dostępna</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-sm bg-secondary" />
-            <span className="font-body text-xs text-muted-foreground">Zarezerwowana</span>
+            <div className="w-3 h-3 rounded-sm bg-meringue/10" />
+            <span className="font-body text-xs text-meringue-deep">Zarezerwowana</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-sm bg-muted/30" />
-            <span className="font-body text-xs text-muted-foreground">Zamknięte</span>
+            <div className="w-3 h-3 rounded-sm bg-meringue-deep/20" />
+            <span className="font-body text-xs text-meringue-deep">Zamknięte</span>
           </div>
         </div>
       </div>
