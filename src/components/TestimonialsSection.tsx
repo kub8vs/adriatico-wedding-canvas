@@ -31,13 +31,13 @@ const TestimonialsSection = () => {
   const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
 
   return (
-    <section id="testimonials" className="section-padding bg-navy-light">
+    <section id="testimonials" className="section-padding bg-meringue-dark">
       <RevealOnScroll className="text-center mb-16">
         <Heart size={24} className="text-gold mx-auto mb-4" />
-        <p className="font-sans text-xs tracking-[0.5em] uppercase text-gold mb-4">
+        <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-4">
           Opinie par
         </p>
-        <h2 className="font-display text-4xl md:text-6xl text-cream">
+        <h2 className="font-display text-4xl md:text-6xl text-charcoal">
           Historie Miłosne
         </h2>
         <div className="gold-line w-24 mx-auto mt-6" />
@@ -53,21 +53,21 @@ const TestimonialsSection = () => {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-center"
           >
-            <blockquote className="font-body text-2xl md:text-3xl text-cream leading-relaxed italic mb-8">
+            <blockquote className="font-accent text-2xl md:text-3xl text-charcoal leading-relaxed italic mb-8">
               "{testimonials[current].quote}"
             </blockquote>
             <div className="gold-line w-12 mx-auto mb-6" />
             <p className="font-display text-xl text-gold">
               {testimonials[current].names}
             </p>
-            <p className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-muted mt-2">
               {testimonials[current].hall} · {testimonials[current].date}
             </p>
           </motion.div>
         </AnimatePresence>
 
         <div className="flex justify-center items-center gap-8 mt-12">
-          <button onClick={prev} className="text-muted-foreground hover:text-gold transition-colors">
+          <button onClick={prev} className="text-charcoal-muted hover:text-gold transition-colors">
             <ChevronLeft size={24} />
           </button>
           <div className="flex gap-2">
@@ -76,12 +76,12 @@ const TestimonialsSection = () => {
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i === current ? "bg-gold w-6" : "bg-muted"
+                  i === current ? "bg-gold w-6" : "bg-charcoal-muted/30"
                 }`}
               />
             ))}
           </div>
-          <button onClick={next} className="text-muted-foreground hover:text-gold transition-colors">
+          <button onClick={next} className="text-charcoal-muted hover:text-gold transition-colors">
             <ChevronRight size={24} />
           </button>
         </div>

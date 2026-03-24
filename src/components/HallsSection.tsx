@@ -46,19 +46,19 @@ const HallsSection = () => {
         <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-4">
           Nasze przestrzenie
         </p>
-        <h2 className="font-display text-4xl md:text-6xl text-cream">
+        <h2 className="font-display text-4xl md:text-6xl text-charcoal">
           Dwie Sale, Jedna Wizja
         </h2>
         <div className="gold-line w-24 mx-auto mt-6" />
       </RevealOnScroll>
 
-      <div className="grid md:grid-cols-2 gap-4 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto">
         {halls.map((hall, i) => (
           <RevealOnScroll key={hall.name} delay={i * 0.2} direction={i === 0 ? "left" : "right"}>
             <motion.div
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.5 }}
-              className="relative group overflow-hidden cursor-pointer"
+              className="relative group overflow-hidden cursor-pointer rounded-sm"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <motion.img
@@ -68,7 +68,7 @@ const HallsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
                 <div className="flex items-center gap-3 mb-3">
                   <hall.icon size={18} className="text-gold" />
@@ -76,18 +76,18 @@ const HallsSection = () => {
                     {hall.capacity}
                   </span>
                 </div>
-                <h3 className="font-display text-3xl md:text-4xl text-cream mb-1">
+                <h3 className="font-display text-3xl md:text-4xl text-meringue mb-1">
                   {hall.name}
                 </h3>
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-meringue-deep mb-4">
                   {hall.subtitle}
                 </p>
-                <p className="font-body text-base text-cream-dark leading-relaxed max-w-md mb-4">
+                <p className="font-body text-base text-meringue-dark leading-relaxed max-w-md mb-4">
                   {hall.description}
                 </p>
                 <ul className="space-y-1">
                   {hall.features.map((f) => (
-                    <li key={f} className="font-body text-sm text-gold/80 flex items-center gap-2">
+                    <li key={f} className="font-body text-sm text-gold-light flex items-center gap-2">
                       <span className="w-1 h-1 bg-gold rounded-full" />
                       {f}
                     </li>

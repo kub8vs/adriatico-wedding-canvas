@@ -41,7 +41,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-body text-xs tracking-[0.2em] uppercase text-cream-dark hover:text-gold transition-colors duration-300"
+                className="font-body text-xs tracking-[0.2em] uppercase text-charcoal-muted hover:text-gold transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden text-cream"
+            className="md:hidden text-charcoal"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="font-display text-2xl text-cream hover:text-gold transition-colors"
+                className="font-display text-2xl text-charcoal hover:text-gold transition-colors"
               >
                 {link.label}
               </motion.a>

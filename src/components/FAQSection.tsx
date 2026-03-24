@@ -42,7 +42,7 @@ const FAQSection = () => {
         <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-4">
           Często zadawane pytania
         </p>
-        <h2 className="font-display text-4xl md:text-6xl text-cream">
+        <h2 className="font-display text-4xl md:text-6xl text-charcoal">
           FAQ
         </h2>
         <div className="gold-line w-24 mx-auto mt-6" />
@@ -55,12 +55,12 @@ const FAQSection = () => {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="border border-border px-6 data-[state=open]:border-gold/30 transition-colors"
+                className="border border-border px-6 data-[state=open]:border-gold/40 transition-colors rounded-sm"
               >
-                <AccordionTrigger className="font-display text-lg text-cream hover:text-gold hover:no-underline py-5">
+                <AccordionTrigger className="font-display text-lg text-charcoal hover:text-gold hover:no-underline py-5">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-base text-cream-dark leading-relaxed pb-5">
+                <AccordionContent className="font-body text-base text-charcoal-muted leading-relaxed pb-5">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

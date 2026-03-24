@@ -43,8 +43,8 @@ const ContactForm = ({ selectedDate, selectedHall }: ContactFormProps) => {
         <div className="w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mx-auto mb-6">
           <Check size={28} className="text-gold" />
         </div>
-        <h3 className="font-display text-3xl text-cream mb-4">Dziękujemy!</h3>
-        <p className="font-body text-lg text-cream-dark text-center">
+        <h3 className="font-display text-3xl mb-4">Dziękujemy!</h3>
+        <p className="font-body text-lg text-meringue-deep text-center">
           Otrzymaliśmy Twoje zapytanie. Skontaktujemy się w ciągu 24 godzin.
         </p>
       </div>
@@ -52,7 +52,7 @@ const ContactForm = ({ selectedDate, selectedHall }: ContactFormProps) => {
   }
 
   const inputClass =
-    "w-full bg-secondary border border-border px-4 py-3 font-body text-base text-cream placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 transition-colors";
+    "w-full bg-meringue/10 border border-meringue-deep/20 px-4 py-3 font-body text-base text-meringue placeholder:text-meringue-deep focus:outline-none focus:border-gold/50 transition-colors rounded-sm";
 
   return (
     <RevealOnScroll>
@@ -109,7 +109,7 @@ const ContactForm = ({ selectedDate, selectedHall }: ContactFormProps) => {
               {format(selectedDate, "d MMMM yyyy", { locale: pl })}
             </span>
           ) : (
-            <span className="text-muted-foreground">
+            <span className="text-meringue-deep">
               ← Kliknij wolną datę w kalendarzu
             </span>
           )}
@@ -123,7 +123,7 @@ const ContactForm = ({ selectedDate, selectedHall }: ContactFormProps) => {
         />
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-3 font-body text-xs tracking-[0.3em] uppercase border border-gold/30 px-10 py-4 text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-500"
+          className="w-full flex items-center justify-center gap-3 font-body text-xs tracking-[0.3em] uppercase bg-gold px-10 py-4 text-primary-foreground hover:bg-gold-dark transition-all duration-500 rounded-sm"
         >
           <Send size={14} />
           Wyślij zapytanie
