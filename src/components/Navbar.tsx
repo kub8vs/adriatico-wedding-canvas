@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Nasze Sale", href: "#halls" },
-  { label: "Dostępność", href: "#availability" },
+  { label: "O Nas", href: "#about" },
+  { label: "Sale", href: "#halls" },
   { label: "Gastronomia", href: "#gastronomy" },
-  { label: "Historie Miłosne", href: "#testimonials" },
+  { label: "Ogród", href: "#garden" },
+  { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#contact" },
 ];
 
@@ -35,20 +36,18 @@ const Navbar = () => {
             ADRIATICO
           </a>
 
-          {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="font-sans text-xs tracking-[0.2em] uppercase text-cream-dark hover:text-gold transition-colors duration-300"
+                className="font-body text-xs tracking-[0.2em] uppercase text-cream-dark hover:text-gold transition-colors duration-300"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-cream"
@@ -58,7 +57,6 @@ const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

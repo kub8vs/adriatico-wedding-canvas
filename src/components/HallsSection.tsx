@@ -6,19 +6,35 @@ import { Users, Sparkles } from "lucide-react";
 
 const halls = [
   {
-    name: "Duża Sala",
+    name: "Sala Duża",
     subtitle: "Grand Hall",
     image: grandHall,
-    capacity: "do 250 gości",
-    description: "Przestronna, majestatyczna sala z kryształowymi żyrandolami i panoramicznym widokiem. Idealna na wielkie celebracje.",
+    capacity: "do 150 gości",
+    features: [
+      "Profesjonalna scena",
+      "Klimatyzacja",
+      "Wysokie sufity z żyrandolami",
+      "Wyjście na ogród",
+      "Oświetlenie LED w cenie",
+    ],
+    description:
+      "Majestatyczna przestrzeń z kryształowymi żyrandolami, lustrzanymi sufitami i sceną. Idealna na wielkie wesela i bankiety.",
     icon: Users,
   },
   {
-    name: "Mała Sala",
+    name: "Sala Mała",
     subtitle: "Boutique Hall",
     image: boutiqueHall,
-    capacity: "do 80 gości",
-    description: "Kameralna elegancja w ciepłym blasku świec. Perfekcyjna na intymne przyjęcia w gronie najbliższych.",
+    capacity: "do 40 gości",
+    features: [
+      "Styl staropolski",
+      "Ciepłe drewniane akcenty",
+      "Prywatny bar",
+      "Idealna na komunie i chrzciny",
+      "Kameralna atmosfera",
+    ],
+    description:
+      "Kameralna elegancja w stylu staropolskim — ciepłe drewno, przytulna atmosfera i prywatny bar. Perfekcyjna na intymne uroczystości.",
     icon: Sparkles,
   },
 ];
@@ -27,7 +43,7 @@ const HallsSection = () => {
   return (
     <section id="halls" className="section-padding">
       <RevealOnScroll className="text-center mb-16">
-        <p className="font-sans text-xs tracking-[0.5em] uppercase text-gold mb-4">
+        <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-4">
           Nasze przestrzenie
         </p>
         <h2 className="font-display text-4xl md:text-6xl text-cream">
@@ -52,23 +68,31 @@ const HallsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
                 <div className="flex items-center gap-3 mb-3">
                   <hall.icon size={18} className="text-gold" />
-                  <span className="font-sans text-xs tracking-[0.3em] uppercase text-gold">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-gold">
                     {hall.capacity}
                   </span>
                 </div>
                 <h3 className="font-display text-3xl md:text-4xl text-cream mb-1">
                   {hall.name}
                 </h3>
-                <p className="font-sans text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
                   {hall.subtitle}
                 </p>
-                <p className="font-body text-lg text-cream-dark leading-relaxed max-w-md">
+                <p className="font-body text-base text-cream-dark leading-relaxed max-w-md mb-4">
                   {hall.description}
                 </p>
+                <ul className="space-y-1">
+                  {hall.features.map((f) => (
+                    <li key={f} className="font-body text-sm text-gold/80 flex items-center gap-2">
+                      <span className="w-1 h-1 bg-gold rounded-full" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           </RevealOnScroll>

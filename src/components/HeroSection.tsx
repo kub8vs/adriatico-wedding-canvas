@@ -1,7 +1,23 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-wedding.jpg";
 
+const slogans = [
+  "Tradycja Spotyka Elegancję.",
+  "Twoje Wymarzone Wesele w Sercu Andrespola.",
+  "Miejsce, Gdzie Tworzą się Wspomnienia.",
+];
+
 const HeroSection = () => {
+  const [sloganIndex, setSloganIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSloganIndex((prev) => (prev + 1) % slogans.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative h-screen overflow-hidden">
       {/* Background image with parallax-like scale */}
@@ -13,12 +29,12 @@ const HeroSection = () => {
       >
         <img
           src={heroImage}
-          alt="Adriatico luxury wedding venue"
+          alt="Adriatico sala weselna Andrespol"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </motion.div>
 
       {/* Content */}
@@ -29,26 +45,50 @@ const HeroSection = () => {
           transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="text-center"
         >
-          <p className="font-sans text-xs tracking-[0.5em] uppercase text-gold mb-6">
-            Sala Weselna & Bankietowa
+          <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-6">
+            Sala Weselna & Bankietowa · Andrespol
           </p>
-          <h1 className="font-display text-6xl sm:text-8xl md:text-9xl tracking-[0.15em] text-gold-gradient leading-none mb-8">
+
+          {/* Massive title with gold gradient */}
+          <h1
+            className="font-display text-7xl sm:text-8xl md:text-[10rem] tracking-[0.15em] text-gold-gradient leading-none mb-6"
+            style={{
+              backgroundImage: `linear-gradient(135deg, hsl(43 65% 62%), hsl(43 72% 45%), hsl(43 60% 35%))`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
             ADRIATICO
           </h1>
+
           <div className="gold-line w-32 mx-auto mb-8" />
-          <p className="font-body text-xl md:text-2xl text-cream-dark max-w-xl mx-auto leading-relaxed">
-            Gdzie elegancja spotyka się z morzem. Stwórz niezapomniane wspomnienia w naszych ekskluzywnych salach.
-          </p>
+
+          {/* Rotating slogans */}
+          <div className="h-16 flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={sloganIndex}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                className="font-body text-xl md:text-2xl text-cream-dark max-w-xl mx-auto leading-relaxed italic"
+              >
+                {slogans[sloganIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
         </motion.div>
 
         <motion.a
-          href="#availability"
+          href="#about"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="mt-12 font-sans text-xs tracking-[0.3em] uppercase border border-gold/30 px-8 py-4 text-gold hover:bg-gold/10 transition-all duration-500"
+          className="mt-12 font-body text-xs tracking-[0.3em] uppercase border border-gold/30 px-8 py-4 text-gold hover:bg-gold/10 transition-all duration-500"
         >
-          Sprawdź dostępność
+          Odkryj Naszą Historię
         </motion.a>
       </div>
 
@@ -59,7 +99,7 @@ const HeroSection = () => {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
+        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
           Przewiń w dół
         </span>
         <motion.div

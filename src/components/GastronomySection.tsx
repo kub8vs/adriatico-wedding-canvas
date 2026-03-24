@@ -1,11 +1,12 @@
 import gastronomyImg from "@/assets/gastronomy.jpg";
 import RevealOnScroll from "./RevealOnScroll";
-import { UtensilsCrossed, Wine, Cake } from "lucide-react";
+import { UtensilsCrossed, Beef, CakeSlice, Salad } from "lucide-react";
 
-const menuItems = [
-  { icon: UtensilsCrossed, title: "Kolacja Degustacyjna", desc: "5-daniowe menu autorskie dopasowane do wizji Waszego przyjęcia" },
-  { icon: Wine, title: "Open Bar Premium", desc: "Najwyższej jakości alkohole, koktajle autorskie i napoje bezalkoholowe" },
-  { icon: Cake, title: "Słodki Stół", desc: "Artystyczne torty weselne i desery przygotowane przez naszych cukierników" },
+const specialties = [
+  { icon: Beef, title: "Kaczka Pieczona", desc: "Serwowana tradycyjnie z jabłkami i modrą kapustą" },
+  { icon: UtensilsCrossed, title: "Rosół Babci", desc: "Złocisty, aromatyczny — jak u mamy" },
+  { icon: Salad, title: "Wiejski Stół", desc: "Obfitość wędlin, serów i domowych przetworów" },
+  { icon: CakeSlice, title: "Fontanna Czekoladowa", desc: "Z najlepszą belgijską czekoladą i świeżymi owocami" },
 ];
 
 const GastronomySection = () => {
@@ -16,7 +17,7 @@ const GastronomySection = () => {
           <div className="overflow-hidden">
             <img
               src={gastronomyImg}
-              alt="Gastronomia Adriatico"
+              alt="Kuchnia Adriatico"
               loading="lazy"
               className="w-full aspect-[3/4] object-cover"
             />
@@ -24,27 +25,31 @@ const GastronomySection = () => {
         </RevealOnScroll>
 
         <RevealOnScroll direction="right">
-          <p className="font-sans text-xs tracking-[0.5em] uppercase text-gold mb-4">
-            Kulinarne doznania
+          <p className="font-body text-xs tracking-[0.5em] uppercase text-gold mb-4">
+            Domowe smaki
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-cream mb-6">
             Gastronomia
           </h2>
           <div className="gold-line w-16 mb-8" style={{ marginLeft: 0 }} />
-          <p className="font-body text-lg text-cream-dark leading-relaxed mb-12">
-            Nasi szefowie kuchni tworzą menu, które jest podróżą smaków — od tradycyjnych polskich potraw po nowoczesną kuchnię europejską, każde danie jest dziełem sztuki.
+          <p className="font-body text-lg text-cream-dark leading-relaxed mb-4">
+            Stawiamy na obfitość i domowe smaki. U nas nie ma porcjowania — serwujemy tradycyjne
+            <strong className="text-gold"> półmiski</strong>, żeby każdy gość mógł jeść ile dusza zapragnie.
+          </p>
+          <p className="font-body text-base text-muted-foreground mb-10">
+            Nasze specjały to kwintesencja polskiej kuchni — przygotowywane z pasją i najświeższych składników.
           </p>
 
-          <div className="space-y-8">
-            {menuItems.map((item, i) => (
-              <RevealOnScroll key={item.title} delay={i * 0.15}>
-                <div className="flex gap-5">
-                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center border border-gold/30">
-                    <item.icon size={20} className="text-gold" />
+          <div className="space-y-6">
+            {specialties.map((item, i) => (
+              <RevealOnScroll key={item.title} delay={i * 0.12}>
+                <div className="flex gap-5 items-start">
+                  <div className="w-11 h-11 flex-shrink-0 flex items-center justify-center border border-gold/30">
+                    <item.icon size={18} className="text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl text-cream mb-1">{item.title}</h3>
-                    <p className="font-body text-base text-muted-foreground">{item.desc}</p>
+                    <h3 className="font-display text-lg text-cream mb-0.5">{item.title}</h3>
+                    <p className="font-body text-sm text-muted-foreground">{item.desc}</p>
                   </div>
                 </div>
               </RevealOnScroll>
