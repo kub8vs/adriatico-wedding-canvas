@@ -47,20 +47,23 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
-          medium: "hsl(var(--navy-medium))",
+        meringue: {
+          DEFAULT: "hsl(var(--meringue))",
+          dark: "hsl(var(--meringue-dark))",
+          deep: "hsl(var(--meringue-deep))",
+        },
+        charcoal: {
+          DEFAULT: "hsl(var(--charcoal))",
+          light: "hsl(var(--charcoal-light))",
+          muted: "hsl(var(--charcoal-muted))",
         },
         gold: {
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",
+          accent: "hsl(var(--gold-accent))",
         },
-        cream: {
-          DEFAULT: "hsl(var(--cream))",
-          dark: "hsl(var(--cream-dark))",
-        },
+        espresso: "hsl(var(--espresso))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -74,7 +77,8 @@ export default {
       },
       fontFamily: {
         display: ['Playfair Display', 'serif'],
-        body: ['Cormorant Garamond', 'serif'],
+        body: ['Montserrat', 'sans-serif'],
+        accent: ['Cormorant Garamond', 'serif'],
         sans: ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
