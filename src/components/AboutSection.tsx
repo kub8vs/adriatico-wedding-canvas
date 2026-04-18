@@ -5,7 +5,7 @@ const highlights = [
   { icon: Clock, label: "15 lat doświadczenia" },
   { icon: Crown, label: "Kryształowe żyrandole" },
   { icon: Gem, label: "Lustra sufitowe" },
-  { icon: Armchair, label: "Krzesła Ludwik XVI" },
+  { icon: Armchair, label: "Bogaty ustrój" },
 ];
 
 const AboutSection = () => {
@@ -22,7 +22,7 @@ const AboutSection = () => {
           <div className="gold-line w-24 mx-auto mb-10" />
           <p className="font-accent text-xl md:text-2xl text-meringue-deep leading-relaxed max-w-3xl mx-auto mb-16">
             Od ponad 15 lat Adriatico w Andrespolu jest synonimem eleganckiego przyjęcia.
-            Nasze sale zdobią kryształowe żyrandole, lustrzane sufity i meble w stylu Ludwika XVI
+            Nasze sale zdobią kryształowe żyrandole, lustrzane sufity
             — bo wierzymy, że każde wydarzenie zasługuje na królewską oprawę.
           </p>
         </RevealOnScroll>

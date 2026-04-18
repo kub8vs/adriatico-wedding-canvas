@@ -9,20 +9,20 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    q: "Jaka jest pojemność sal?",
-    a: "Sala Duża mieści do 150 gości, a Sala Mała do 40 gości. Obie sale posiadają pełne wyposażenie i klimatyzację.",
+    q: "Jakie są dostępne terminy na nadchodzący sezon?",
+    a: "Kalendarz rezerwacji na najbliższy rok jest już otwarty. Najpopularniejsze terminy sobotnie w sezonie letnim znikają najszybciej, dlatego zachęcamy do kontaktu telefonicznego w celu sprawdzenia konkretnej daty lub rozważenia organizacji przyjęcia w piątek lub niedzielę na preferencyjnych warunkach.",
   },
   {
-    q: "Czy oferujecie nocleg?",
-    a: "Tak! Młoda Para otrzymuje w prezencie luksusowy apartament. Dla gości przygotowaliśmy dodatkowe komfortowe pokoje.",
+    q: "Ile osób pomieści Sala Kryształowa, a ile Sala Butikowa?",
+    a: "Sala Kryształowa jest idealna dla hucznych wesel nawet do 150 osób! Dla par planujących bardziej kameralne uroczystości przygotowaliśmy Salę Butikową, która komfortowo ugości do 40 osób, zachowując przytulną i intymną atmosferę.",
   },
   {
     q: "Czy można zorganizować ślub w ogrodzie?",
-    a: "Oczywiście! Nasz piękny ogród jest w pełni wyposażony do ceremonii plenerowych — ołtarz, dekoracje i nagłośnienie w cenie.",
+    a: "Tak, nasz prywatny ogród z przygotowaną strefą ceremonii jest do Państwa dyspozycji. Zapewniamy elegancką oprawę, krzesła dla gości oraz nagłośnienie, aby przysięga w otoczeniu zieleni była niezapomnianym przeżyciem.",
   },
   {
-    q: "Czy są opcje dietetyczne?",
-    a: "Tak, oferujemy menu wegetariańskie, bezglutenowe i inne opcje dietetyczne. Każde menu dopasowujemy indywidualnie.",
+    q: "Czy oferujecie noclegi dla gości weselnych?",
+    a: "Tak, dysponujemy komfortową bazą noclegową bezpośrednio w naszym obiekcie. Dla Nowożeńców przygotowaliśmy luksusowy apartament w prezencie, natomiast dla gości weselnych oferujemy pokoje w specjalnych, niższych cenach.",
   },
   {
     q: "Jak wygląda kwestia parkingu?",
