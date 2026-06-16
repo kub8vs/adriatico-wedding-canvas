@@ -1,4 +1,4 @@
-import gastronomyImg from "@/assets/gastronomy.jpg";
+import gastronomyImg1 from "@/assets/gastronomy.jpg";
 import RevealOnScroll from "./RevealOnScroll";
 import { UtensilsCrossed, Beef, CakeSlice, Salad } from "lucide-react";
 
@@ -16,7 +16,7 @@ const GastronomySection = () => {
         <RevealOnScroll direction="left">
           <div className="overflow-hidden rounded-sm">
             <img
-              src={gastronomyImg}
+              src={gastronomyImg1}
               alt="Kuchnia Adriatico"
               loading="lazy"
               className="w-full aspect-[3/4] object-cover"
