@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
 import RevealOnScroll from "./RevealOnScroll";
+import srodekImg from "@/assets/srodek.jpg";
+import bigImg from "@/assets/big.jpg";
+import gastronomyImg from "@/assets/gastronomy.jpg";
+import smallHallImg from "@/assets/small-hall.jpg";
+import img5 from "@/assets/5.jpg";
 
 const images = [
-  { src: "/src/assets/srodek.jpg", title: "Eleganckie Wnętrza", size: "col-span-2 row-span-2" },
-  { src: "/src/assets/big.jpg", title: "Sala Balowa", size: "col-span-1 row-span-1" },
-  { src: "/src/assets/gastronomy.jpg", title: "Wykwintna Kuchnia", size: "col-span-1 row-span-2" },
-  { src: "/src/assets/small-hall.jpg", title: "Sala Kameralna", size: "col-span-1 row-span-1" },
-  { src: "/src/assets/5.jpg", title: "Ślub w Plenerze", size: "col-span-2 row-span-1" },
+  { src: srodekImg, title: "Eleganckie Wnętrza", size: "col-span-2 row-span-2" },
+  { src: bigImg, title: "Sala Balowa", size: "col-span-1 row-span-1" },
+  { src: gastronomyImg, title: "Wykwintna Kuchnia", size: "col-span-1 row-span-2" },
+  { src: smallHallImg, title: "Sala Kameralna", size: "col-span-1 row-span-1" },
+  { src: img5, title: "Ślub w Plenerze", size: "col-span-2 row-span-1" },
 ];
 
 const GallerySection = () => {
