@@ -51,13 +51,13 @@ const HeroSection = () => {
           </p>
 
           {/* 
-            ZMIANA: Zwiększony clamp z (2.5rem, 9vw, 11rem) na (3.5rem, 11vw, 12rem)
-            - Minimalny rozmiar na małych telefonach wzrósł do 3.5rem (jest lekko większy).
-            - Skalowanie bazowe wzrosło do 11vw, aby szybciej stawał się duży na średnich ekranach.
-            - Maksymalny rozmiar na komputerach to teraz potężne 12rem.
+            ZMIANA: clamp(4.5rem, 10vw, 10.5rem)
+            - 4.5rem: duży i czytelny na telefonach (z zachowaniem ciasnego rozstawu liter)
+            - 10vw: płynne, stabilne skalowanie
+            - 10.5rem: zmniejszony, lżejszy i bardziej prestiżowy rozmiar na komputerach
           */}
           <h1 
-            style={{ fontSize: "clamp(3.5rem, 11vw, 12rem)" }}
+            style={{ fontSize: "clamp(4.5rem, 10vw, 10.5rem)" }}
             className="font-display tracking-tight md:tracking-[0.15em] leading-none mb-4 text-black font-medium drop-shadow-sm uppercase break-words block w-full px-2"
           >
             ADRIATICO
