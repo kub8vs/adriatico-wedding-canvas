@@ -1,9 +1,8 @@
 import gastronomyImg1 from "@/assets/gastronomy.jpg";
 import RevealOnScroll from "./RevealOnScroll";
-import { UtensilsCrossed, Beef, CakeSlice, Salad } from "lucide-react";
+import { UtensilsCrossed, CakeSlice, Salad } from "lucide-react";
 
 const specialties = [
-  { icon: Beef, title: "Kaczka Pieczona", desc: "Serwowana tradycyjnie z jabłkami i modrą kapustą" },
   { icon: UtensilsCrossed, title: "Rosół Babci", desc: "Złocisty, aromatyczny — jak u mamy" },
   { icon: Salad, title: "Wiejski Stół", desc: "Obfitość wędlin, serów i domowych przetworów" },
   { icon: CakeSlice, title: "Fontanna Czekoladowa", desc: "Z najlepszą belgijską czekoladą i świeżymi owocami" },

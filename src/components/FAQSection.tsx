@@ -13,8 +13,8 @@ const faqs = [
     a: "Kalendarz rezerwacji na najbliższy rok jest już otwarty. Najpopularniejsze terminy sobotnie w sezonie letnim znikają najszybciej, dlatego zachęcamy do kontaktu telefonicznego w celu sprawdzenia konkretnej daty lub rozważenia organizacji przyjęcia w piątek lub niedzielę na preferencyjnych warunkach.",
   },
   {
-    q: "Ile osób pomieści Sala Kryształowa, a ile Sala Butikowa?",
-    a: "Sala Kryształowa jest idealna dla hucznych wesel nawet do 150 osób! Dla par planujących bardziej kameralne uroczystości przygotowaliśmy Salę Butikową, która komfortowo ugości do 40 osób, zachowując przytulną i intymną atmosferę.",
+    q: "Ile osób pomieści Sala Kryształowa, a ile Mała Sala?",
+    a: "Sala Kryształowa jest idealna dla hucznych wesel nawet do 150 osób! Dla par planujących bardziej kameralne uroczystości — a także na komunie, chrzty święte i przyjęcia okolicznościowe — przygotowaliśmy Małą Salę, która komfortowo ugości do 40 osób, zachowując przytulną i intymną atmosferę.",
   },
   {
     q: "Czy można zorganizować ślub w ogrodzie?",

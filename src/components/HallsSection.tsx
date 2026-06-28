@@ -15,12 +15,12 @@ const halls = [
     features: ["Do 150 gości", "Parkiet taneczny", "Scena dla zespołu", "Bezpośrednie wyjście na taras"],
   },
   {
-    title: "Sala Butikowa",
+    title: "Mała Sala",
     subtitle: "Small Hall",
     description:
-      "Kameralna i przytulna przestrzeń na intymne przyjęcia do 40 osób. Idealna dla par ceniących bliskość i subtelną elegancję w nowoczesnym wydaniu.",
+      "Kameralna i przytulna przestrzeń na intymne przyjęcia do 40 osób. To idealne miejsce nie tylko na wesela — doskonale sprawdzi się również podczas komunii, chrztów świętych oraz innych uroczystości rodzinnych. Dla wszystkich, którzy cenią bliskość i subtelną elegancję.",
     image: boutiqueHallImg,
-    features: ["Do 40 gości", "Klimatyczne oświetlenie", "Prywatny bar", "Widok na ogród"],
+    features: ["Do 40 gości", "Klimatyczne oświetlenie", "Drinkbar", "Widok na ogród"],
   },
 ];
 
@@ -33,7 +33,7 @@ const HallsSection = () => {
             <h2 className="font-display text-4xl md:text-5xl mb-6">Nasze Sale</h2>
             <div className="w-24 h-px bg-gold mx-auto mb-6"></div>
             <p className="max-w-2xl mx-auto text-gray-600 font-body leading-relaxed">
-              Oferujemy dwie unikalne przestrzenie, które możemy dostosować do Państwa wizji. 
+              Oferujemy dwie unikalne przestrzenie, które możemy dostosować do Państwa wizji.
               Od wielkich bali po kameralne kolacje.
             </p>
           </div>
@@ -41,7 +41,7 @@ const HallsSection = () => {
 
         <div className="space-y-32">
           {halls.map((hall, index) => (
-            <div 
+            <div
               key={hall.title}
               className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-20 items-center`}
             >

@@ -5,6 +5,7 @@ const navLinks = [
   { label: "O Nas", href: "#about" },
   { label: "Sale", href: "#halls" },
   { label: "Gastronomia", href: "#gastronomy" },
+  { label: "Menu", href: "#menu" },
   { label: "Ogród", href: "#garden" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#contact" },

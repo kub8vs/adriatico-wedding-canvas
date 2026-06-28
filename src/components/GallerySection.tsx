@@ -4,14 +4,26 @@ import srodekImg from "@/assets/srodek.jpg";
 import bigImg from "@/assets/big.jpg";
 import gastronomyImg from "@/assets/gastronomy.jpg";
 import smallHallImg from "@/assets/small-hall.jpg";
-import img5 from "@/assets/5.jpg";
+import ballroomImg from "@/assets/IMG_3562.jpg";
+import banquetImg from "@/assets/IMG_3512.jpg";
+import celebrationImg from "@/assets/IMG_3548.jpg";
+import neonImg from "@/assets/IMG_3520.jpg";
+import headTableImg from "@/assets/dom-weselny7.jpg";
+import chandelierImg from "@/assets/dom-weselny8.jpg";
 
+// Galeria w układzie masonry — aby dodać kolejne zdjęcia (np. od fotografa)
+// wystarczy zaimportować plik i dopisać nową pozycję do tablicy `images`.
 const images = [
-  { src: srodekImg, title: "Eleganckie Wnętrza", size: "col-span-2 row-span-2" },
-  { src: bigImg, title: "Sala Balowa", size: "col-span-1 row-span-1" },
-  { src: gastronomyImg, title: "Wykwintna Kuchnia", size: "col-span-1 row-span-2" },
-  { src: smallHallImg, title: "Sala Kameralna", size: "col-span-1 row-span-1" },
-  { src: img5, title: "Ślub w Plenerze", size: "col-span-2 row-span-1" },
+  { src: srodekImg, title: "Eleganckie Wnętrza" },
+  { src: ballroomImg, title: "Sala Balowa" },
+  { src: bigImg, title: "Sala Kryształowa" },
+  { src: banquetImg, title: "Przyjęcie w Sali" },
+  { src: gastronomyImg, title: "Wykwintna Kuchnia" },
+  { src: celebrationImg, title: "Komunie i Chrzciny" },
+  { src: smallHallImg, title: "Mała Sala" },
+  { src: headTableImg, title: "Stół Pary Młodej" },
+  { src: chandelierImg, title: "Kryształowe Żyrandole" },
+  { src: neonImg, title: "Detale Adriatico" },
 ];
 
 const GallerySection = () => {
@@ -26,23 +38,24 @@ const GallerySection = () => {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-none md:grid-rows-3 gap-4 h-auto md:h-[900px]">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
           {images.map((img, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`${img.size} relative group overflow-hidden cursor-pointer`}
+              transition={{ duration: 0.8, delay: (index % 3) * 0.12 }}
+              className="relative group overflow-hidden cursor-pointer mb-4 break-inside-avoid"
             >
               {/* Image */}
               <img
                 src={img.src}
                 alt={img.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              
+
               {/* Overlay on Hover */}
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
                 <div className="text-center p-4">
